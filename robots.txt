@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /backend/
+Disallow: /backend/*
+
+# Sitemap Index
+Sitemap: https://nagarmitra.pages.dev/sitemap.xml

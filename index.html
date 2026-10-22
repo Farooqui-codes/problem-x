@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070d1a">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>NagarMitra – Smart City Complaint Management System</title>
+    <meta name="description"
+        content="NagarMitra is a smart civic complaint management portal. Report city potholes, garbage, street lights, water leakages, and track department resolution in real time.">
+    <meta name="keywords"
+        content="complaint management, city problems, civic portal, report pothole, street light complaint, municipal grievance, water sewage complaint, public infrastructure, nagarmitra">
+    <meta name="author" content="Umair Farooqui">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://nagarmitra.pages.dev/">
+    <!-- Cloud API Configuration (Leave blank for auto-detection, or set to your Render URL) -->
+    <meta name="nagarmitra-api-url" content="">
+
+    <!-- Google Search Console Verification (Replace with your actual token from Search Console) -->
+    <meta name="google-site-verification" content="ENTER_YOUR_GSC_VERIFICATION_CODE_HERE">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nagarmitra.pages.dev/">
+    <meta property="og:title" content="NagarMitra – Smart City Complaint Management System">
+    <meta property="og:description"
+        content="Report local municipal issues, track real-time resolution status, and hold city departments accountable.">
+    <meta property="og:image" content="https://nagarmitra.pages.dev/logo.png">
+    <meta property="og:site_name" content="NagarMitra">
+    <meta property="og:locale" content="en_IN">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nagarmitra.pages.dev/">
+    <meta name="twitter:title" content="NagarMitra – Smart City Complaint Management System">
+    <meta name="twitter:description"
+        content="Report local municipal issues, track real-time resolution status, and hold city departments accountable.">
+    <meta name="twitter:image" content="https://nagarmitra.pages.dev/logo.png">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230284c7'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='900' font-size='34' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="logo.png">
+
+    <!-- Performance Optimizations: Resource Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Stylesheets & Fonts -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- ========================================================
+         GOOGLE ANALYTICS 4 (GA4) & GOOGLE ADS SETUP
+         NOTE: Replace 'G-XXXXXXXXXX' with your GA4 Measurement ID
+               Replace 'AW-XXXXXXXXXX' with your Google Ads Conversion ID
+    ======================================================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        // GA4 Configuration (Replace G-XXXXXXXXXX with your active Google Analytics 4 Measurement ID)
+        gtag('config', 'G-XXXXXXXXXX', {
+            send_page_view: true,
+            page_title: document.title,
+            page_location: window.location.href
+        });
+
+        // Google Ads Conversion Tag (Uncomment and replace AW-XXXXXXXXXX with your Google Ads ID)
+        // gtag('config', 'AW-XXXXXXXXXX');
+
+        // Helper for Google Ads Conversions (Requires your Conversion Action Label e.g. AW-XXXXXXXXXX/AbC-D_efGhI)
+        window.trackAdConversion = function (conversionType, customValue) {
+            if (typeof window.gtag === 'function') {
+                console.log('[Google Ads Conversion Triggered]:', conversionType, customValue);
+                // Example conversion trigger:
+                // gtag('event', 'conversion', {
+                //     'send_to': 'AW-XXXXXXXXXX/YOUR_CONVERSION_LABEL',
+                //     'value': customValue || 1.0,
+                //     'currency': 'INR'
+                // });
+            }
+        };
+    </script>
+
+    <!-- Schema.org JSON-LD Structured Data for Rich Results on Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebApplication",
+          "@id": "https://problem-x-pro.com/#webapp",
+          "name": "NagarMitra",
+          "url": "https://problem-x-pro.com/",
+          "description": "NagarMitra – Smart City Complaint Management System. Empowering citizens to report public municipal issues and track resolution in real time.",
+          "applicationCategory": "GovernmentApplication, CivicUtility",
+          "operatingSystem": "All modern browsers (Mobile, Tablet, Desktop)",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Umair Farooqui",
+            "url": "https://github.com/Farooqui-codes"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://problem-x-pro.com/#organization",
+          "name": "NagarMitra Civic Redressal",
+          "url": "https://problem-x-pro.com/",
+          "logo": "https://problem-x-pro.com/logo.png",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-90049-20733",
+            "contactType": "Citizen Support & Civic Inquiries",
+            "email": "fmdumair07@gmail.com",
+            "availableLanguage": ["English", "Hindi", "Urdu"]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://problem-x-pro.com/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I report a civic problem on NagarMitra?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Log in to your account, click on 'Report a Problem', choose the problem category (Pothole, Garbage, Street Light, Water/Sewage, or Traffic Signal), describe the issue, optionally attach a photo, and submit your complaint."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I track my complaint status?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Go to the 'Track Complaint' tab, enter your unique Complaint ID (e.g. PRB-1001), and click Track to see live progress from Submitted to In Progress and Resolved."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which departments are civic issues routed to?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "NagarMitra automatically categorizes complaints and routes them to Public Works Department (PWD), Municipal Sanitation Department, Electricity & Lighting Board, Jal Board / Water Supply, and Traffic Authorities."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is there any charge for filing complaints?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, NagarMitra is completely free for all citizens to report municipal grievances and track public infrastructure repairs."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <style media="print">
+        .navbar,
+        .scroll-top-btn,
+        .bg-animation,
+        .hero-buttons,
+        #toastContainer,
+        .mobile-menu,
+        .mobile-menu-overlay,
+        footer .footer-social,
+        .palette-dropdown-wrapper,
+        .theme-toggle,
+        .cookie-banner,
+        .scroll-progress,
+        .floating-whatsapp-btn {
+            display: none !important;
+        }
+
+        body {
+            background: #fff !important;
+            color: #000 !important;
+        }
+
+        .page {
+            display: block !important;
+        }
+
+        .page:not(.active) {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body data-theme="dark">
+
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookieBanner" role="alert" aria-live="polite">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p>We use local storage to save your preferences and complaint data. No personal data is shared with third
+                parties.</p>
+        </div>
+        <div class="cookie-actions">
+            <button class="cookie-btn accept" onclick="acceptCookies()" id="cookieAcceptBtn">Accept</button>
+            <button class="cookie-btn decline" onclick="declineCookies()">Decline</button>
+        </div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="bg-animation" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+    <nav class="navbar">
+        <div class="logo" onclick="showPage('home')">
+            <div class="logo-icon" aria-label="NagarMitra logo">
+                <img src="logo.png" alt="NagarMitra logo" onerror="this.style.display='none'">
+            </div>
+            <span>Nagar<span class="accent">Mitra</span></span>
+        </div>
+
+        <div class="nav-links" id="mainNavLinks">
+            <a onclick="showPage('home')" data-page="home" class="active">Home</a>
+            <a onclick="goToReport()" data-page="report">Report</a>
+            <a onclick="goToTrack()" data-page="track">Track</a>
+            <a onclick="goToMyComplaints()" data-page="myComplaints" id="navLinkMyReports">My Reports</a>
+            <a onclick="goToAdmin()" data-page="admin" id="navLinkAdmin">Admin</a>
+        </div>
+
+        <div class="nav-actions" id="navActions">
+            <div class="palette-dropdown-wrapper">
+                <button class="theme-toggle palette-btn" onclick="togglePaletteMenu(event)" title="Change accent color">
+                    <i class="fas fa-palette"></i>
+                </button>
+                <div class="palette-menu" id="paletteMenu">
+                    <span class="palette-menu-title">Accent Color</span>
+                    <div class="palette-options">
+                        <button class="palette-opt active" data-p="azure" onclick="setPalette('azure')"
+                            title="Cyber Azure">
+                            <span class="palette-dot"
+                                style="background: linear-gradient(135deg, #0284c7, #00d2ff);"></span>
+                            <span>Azure (Default)</span>
+                        </button>
+                        <button class="palette-opt" data-p="emerald" onclick="setPalette('emerald')"
+                            title="Emerald Eco">
+                            <span class="palette-dot"
+                                style="background: linear-gradient(135deg, #059669, #34d399);"></span>
+                            <span>Emerald</span>
+                        </button>
+                        <button class="palette-opt" data-p="indigo" onclick="setPalette('indigo')" title="Neon Indigo">
+                            <span class="palette-dot"
+                                style="background: linear-gradient(135deg, #4f46e5, #818cf8);"></span>
+                            <span>Indigo</span>
+                        </button>
+                        <button class="palette-opt" data-p="sunset" onclick="setPalette('sunset')" title="Sunset Amber">
+                            <span class="palette-dot"
+                                style="background: linear-gradient(135deg, #ea580c, #fb923c);"></span>
+                            <span>Sunset</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme">
+                <i class="fas fa-moon" id="themeIcon"></i>
+            </button>
+            <button class="nav-btn" onclick="showPage('login')">Login</button>
+            <button class="nav-btn primary" onclick="showPage('register')">Register</button>
+        </div>
+
+        <!-- Animated Hamburger Toggle for Mobile Navigation -->
+        <button class="mobile-nav-toggle" id="hamburgerBtn" aria-label="Toggle navigation menu" aria-expanded="false"
+            onclick="toggleMobileMenu()" title="Toggle Navigation Menu">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </nav>
+
+    <!-- Mobile Navigation Drawer & Backdrop -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-brand" onclick="showPage('home'); closeMobileMenu();">
+                <div class="logo-icon"><img src="logo.png" alt="NagarMitra logo"></div>
+                <span>Nagar<span class="accent">Mitra</span></span>
+            </div>
+            <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Direct Helpline Calling inside Mobile Drawer -->
+        <div class="mobile-menu-call-wrap">
+            <a href="tel:+919004920733" class="mobile-menu-call-btn" title="Call Civic Helpline Now">
+                <i class="fas fa-phone-volume"></i>
+                <div class="mobile-call-text">
+                    <span class="call-badge"><i class="fas fa-headset"></i> 24/7 HELPLINE</span>
+                    <span class="call-num">+91 90049 20733</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="mobile-menu-links">
+            <a onclick="showPage('home'); closeMobileMenu();" data-page="home" class="mobile-link active">
+                <span class="mobile-link-icon"><i class="fas fa-house"></i></span>
+                <span class="mobile-link-text">Home</span>
+            </a>
+            <a onclick="goToReport(); closeMobileMenu();" data-page="report" class="mobile-link">
+                <span class="mobile-link-icon"><i class="fas fa-bullhorn"></i></span>
+                <span class="mobile-link-text">Report Problem</span>
+            </a>
+            <a onclick="goToTrack(); closeMobileMenu();" data-page="track" class="mobile-link">
+                <span class="mobile-link-icon"><i class="fas fa-magnifying-glass"></i></span>
+                <span class="mobile-link-text">Track Status</span>
+            </a>
+            <a onclick="goToMyComplaints(); closeMobileMenu();" data-page="myComplaints" id="mobileNavLinkMyReports"
+                class="mobile-link">
+                <span class="mobile-link-icon"><i class="fas fa-folder-open"></i></span>
+                <span class="mobile-link-text">My Reports</span>
+            </a>
+            <a onclick="goToAdmin(); closeMobileMenu();" data-page="admin" id="mobileNavLinkAdmin" class="mobile-link">
+                <span class="mobile-link-icon"><i class="fas fa-shield-halved"></i></span>
+                <span class="mobile-link-text">Admin Panel</span>
+            </a>
+        </div>
+
+        <div class="mobile-menu-footer">
+            <div class="mobile-auth-actions" id="mobileAuthActions">
+                <button class="nav-btn full" onclick="showPage('login'); closeMobileMenu();">
+                    <i class="fas fa-sign-in-alt"></i> Login
+                </button>
+                <button class="nav-btn primary full" onclick="showPage('register'); closeMobileMenu();">
+                    <i class="fas fa-user-plus"></i> Register
+                </button>
+            </div>
+            
+            <div class="mobile-menu-bottom-tools">
+                <button class="mobile-tool-btn" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon" id="mobileThemeIcon"></i> <span>Theme</span>
+                </button>
+                <a href="https://wa.me/919004920733?text=Hi%20NagarMitra%2C%20I%20have%20a%20civic%20query" target="_blank" rel="noopener noreferrer" class="mobile-tool-btn wa-tool">
+                    <i class="fab fa-whatsapp"></i> <span>WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= HOME ================= -->
+    <section id="home" class="page active" id="main-content">
+        <div class="hero">
+            <div class="hero-content">
+                <div class="badge">
+                    <i class="fas fa-rocket"></i> City Complaint Portal v2.0
+                </div>
+                <h1>Report Problems.<br><span>Build Better Cities.</span></h1>
+                <p>NagarMitra helps citizens report city issues, track progress and send complaints to the right
+                    department — with real-time updates and public support.</p>
+                <div class="hero-buttons">
+                    <button class="btn primary" onclick="goToReport()">
+                        <i class="fas fa-plus-circle"></i> Report a Problem
+                    </button>
+                    <button class="btn secondary" onclick="goToTrack()">
+                        <i class="fas fa-search-location"></i> Track Complaint
+                    </button>
+                </div>
+
+                <!-- Live Stats -->
+                <div class="hero-stats" id="heroStats">
+                    <div class="hero-stat">
+                        <h3 id="heroTotal">0</h3>
+                        <p>Total</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3 id="heroResolved">0</h3>
+                        <p>Resolved</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h3 id="heroPending">0</h3>
+                        <p>Pending</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <span>HOW IT WORKS</span>
+            <h2>Easy. Clear. Reliable.</h2>
+            <p>Report public issues and follow their progress from start to finish.</p>
+        </div>
+
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <div class="step-icon"><i class="fas fa-pen-to-square"></i></div>
+                <h3>Report</h3>
+                <p>Submit a public problem with description, photo and location.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <div class="step-icon"><i class="fas fa-filter"></i></div>
+                <h3>Review</h3>
+                <p>We review details and suggest best category and priority.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <div class="step-icon"><i class="fas fa-building"></i></div>
+                <h3>Assignment</h3>
+                <p>The complaint is sent to the right department for action.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">04</div>
+                <div class="step-icon"><i class="fas fa-circle-check"></i></div>
+                <h3>Resolution</h3>
+                <p>Citizens keep checking status until the issue is resolved.</p>
+            </div>
+        </div>
+
+        <div class="section-title">
+            <span>SUPPORTED PROBLEMS</span>
+            <h2>What Can You Report?</h2>
+        </div>
+
+        <div class="problem-grid">
+            <div class="problem-card" onclick="quickReport('Pothole / Road Damage')">
+                <div><i class="fas fa-road"></i></div>
+                <h3>Road Damage</h3>
+                <p>Potholes and broken roads</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Garbage Dump &amp; Cleanliness')">
+                <div><i class="fas fa-trash-can"></i></div>
+                <h3>Garbage &amp; Waste</h3>
+                <p>Overflowing bins and littering</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Street Light &amp; Electrical Pole')">
+                <div><i class="fas fa-lightbulb"></i></div>
+                <h3>Street Lighting</h3>
+                <p>Broken lights &amp; open wiring</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Water Supply &amp; Pipeline Leakage')">
+                <div><i class="fas fa-faucet-drip"></i></div>
+                <h3>Water Supply</h3>
+                <p>Pipeline bursts &amp; dirty water</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Open Drainage &amp; Sewage Overflow')">
+                <div><i class="fas fa-water"></i></div>
+                <h3>Drainage &amp; Sewage</h3>
+                <p>Clogged sewers &amp; foul smell</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Traffic Congestion &amp; Signal Malfunction')">
+                <div><i class="fas fa-traffic-light"></i></div>
+                <h3>Traffic &amp; Signals</h3>
+                <p>Signal failure &amp; congestion</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Footpath &amp; Pedestrian Safety')">
+                <div><i class="fas fa-person-walking"></i></div>
+                <h3>Pedestrian &amp; Footpath</h3>
+                <p>Broken walkways &amp; safety hazards</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Stray Animals &amp; Animal Nuisance')">
+                <div><i class="fas fa-dog"></i></div>
+                <h3>Stray Animals</h3>
+                <p>Animal threats &amp; road hazards</p>
+            </div>
+            <div class="problem-card" onclick="quickReport('Other Civic Issues (Others)')">
+                <div><i class="fas fa-circle-question"></i></div>
+                <h3>Other Civic Issues</h3>
+                <p>Report any other public problem</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <div class="info-box" id="aboutSection">
+                <span>ABOUT US</span>
+                <h2>Helping citizens solve city problems faster.</h2>
+                <p>NagarMitra gives people a simple way to report local issues and follow them through to the right
+                    department. We aim to make city services more responsive and easier to trust.</p>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Faster complaint reporting</li>
+                    <li><i class="fas fa-check-circle"></i> Clear department routing</li>
+                    <li><i class="fas fa-check-circle"></i> Better public accountability</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ================= CIVIC EMERGENCY HELPLINE CALLING HUB ================= -->
+        <div class="emergency-hub-section" id="helplineSection">
+            <div class="emergency-hub-box">
+                <div class="emergency-hub-header">
+                    <span><i class="fas fa-phone-volume"></i> Direct Helpline Hub</span>
+                    <h2>Emergency &amp; Civic Contacts</h2>
+                    <p>Direct click-to-call helpline numbers for immediate civic assistance, municipal complaints, and city emergencies.</p>
+                </div>
+
+                <div class="emergency-grid">
+                    <a href="tel:+919004920733" class="emergency-card main-support" title="Call NagarMitra Support Helpline">
+                        <div class="emergency-icon"><i class="fas fa-headset"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">NagarMitra Support &amp; Grievance</div>
+                            <div class="emergency-number">+91 90049 20733 <span class="call-now-pill">Call Now</span></div>
+                        </div>
+                    </a>
+
+                    <a href="tel:112" class="emergency-card police" title="Call National Emergency 112">
+                        <div class="emergency-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">National Emergency / Police</div>
+                            <div class="emergency-number">112 <span class="call-now-pill">Toll Free</span></div>
+                        </div>
+                    </a>
+
+                    <a href="tel:1916" class="emergency-card" title="Call Municipal Corporation Helpline">
+                        <div class="emergency-icon"><i class="fas fa-building-columns"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">Municipal Corporation (Civic)</div>
+                            <div class="emergency-number">1916 <span class="call-now-pill">Call Now</span></div>
+                        </div>
+                    </a>
+
+                    <a href="tel:1912" class="emergency-card electricity" title="Call Electricity Department">
+                        <div class="emergency-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">Electricity &amp; Power Emergency</div>
+                            <div class="emergency-number">1912 <span class="call-now-pill">Call Now</span></div>
+                        </div>
+                    </a>
+
+                    <a href="tel:108" class="emergency-card ambulance" title="Call Ambulance &amp; Medical Emergency">
+                        <div class="emergency-icon"><i class="fas fa-truck-medical"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">Ambulance &amp; Medical Emergency</div>
+                            <div class="emergency-number">108 <span class="call-now-pill">Toll Free</span></div>
+                        </div>
+                    </a>
+
+                    <a href="https://wa.me/919004920733?text=Hi%20NagarMitra%2C%20I%20have%20an%20urgent%20complaint" target="_blank" rel="noopener noreferrer" class="emergency-card" title="WhatsApp Civic Help Desk">
+                        <div class="emergency-icon" style="background:#25d366;"><i class="fab fa-whatsapp"></i></div>
+                        <div class="emergency-details">
+                            <div class="emergency-title">WhatsApp Civic Help Desk</div>
+                            <div class="emergency-number">+91 90049 20733 <span class="call-now-pill">Chat Now</span></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section contact-section">
+            <div class="info-box" id="contactSection">
+                <span>CONTACT US</span>
+                <h2>We're here to help.</h2>
+
+                <!-- Urgent Direct Call Button -->
+                <a href="tel:+919004920733" class="direct-call-badge-btn" title="Call +91 90049 20733 directly">
+                    <i class="fas fa-phone-volume"></i> Urgent? Tap to Call Support: +91 90049 20733
+                </a>
+
+                <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST" onsubmit="submitContact(event)">
+                    <!-- Web3Forms Access Key & Settings -->
+                    <input type="hidden" name="access_key" id="web3formsAccessKey" value="d6c2fab3-1444-4453-b001-641b1f966dee">
+                    <input type="hidden" name="subject" value="NagarMitra: New Citizen Message">
+                    <input type="hidden" name="from_name" value="NagarMitra Grievance Portal">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div id="contactFormInputs">
+                        <label for="contactName">Your Name</label>
+                        <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+
+                        <label for="contactEmail">Email ID</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+
+                        <label for="contactPhone">Mobile Number (For direct callback)</label>
+                        <input type="tel" id="contactPhone" name="phone"
+                            placeholder="Enter your 10-digit mobile number">
+
+                        <label for="contactMessage">Description</label>
+                        <textarea id="contactMessage" name="message" rows="4"
+                            placeholder="Write your message or describe your issue here..." required></textarea>
+
+                        <button class="btn primary full" type="submit" id="contactSubmitBtn">
+                            <i class="fas fa-paper-plane"></i> Send Message via Web3Forms
+                        </button>
+
+                        <div class="direct-contact-hints"
+                            style="margin-top:14px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;font-size:0.84rem;color:var(--text-dim);">
+                            <span><i class="fas fa-envelope" style="color:var(--primary);"></i> <a
+                                    href="mailto:fmdumair07@gmail.com"
+                                    style="color:var(--primary);font-weight:600;">fmdumair07@gmail.com</a></span>
+                            <span>•</span>
+                            <span><i class="fas fa-phone-alt" style="color:var(--primary);"></i> <a
+                                    href="tel:+919004920733" style="color:var(--primary);font-weight:600;">+91 90049
+                                    20733</a></span>
+                        </div>
+                    </div>
+
+                    <div id="contactFormSuccess" class="form-success-state" style="display:none">
+                        <i class="fas fa-circle-check"></i>
+                        <h3>Message Sent via Web3Forms!</h3>
+                        <p>Thank you for reaching out. We'll get back to you soon.</p>
+                        <button class="btn primary" type="button" onclick="resetContactForm()">Send Another</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- ================= MEET THE DEVELOPER ================= -->
+        <div class="dev-section" id="developerSection">
+            <div class="section-title">
+                <span>BEHIND THE CODE</span>
+                <h2>Meet the Developer</h2>
+                <p>The mind and hands that built NagarMitra from the ground up.</p>
+            </div>
+
+            <div class="dev-card-wrapper">
+                <div class="dev-card">
+                    <!-- Glow Ring -->
+                    <div class="dev-photo-ring">
+                        <div class="dev-photo-inner">
+                            <img src="MINE PHOTO.jpeg" alt="Umair Farooqui - Developer of NagarMitra" class="dev-photo"
+                                width="160" height="160" loading="lazy" decoding="async"
+                                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <div class="dev-photo-fallback"><i class="fas fa-user-tie"></i></div>
+                        </div>
+                        <div class="dev-ring-pulse"></div>
+                    </div>
+
+                    <!-- Info -->
+                    <div class="dev-info">
+                        <div class="dev-badge-label"><i class="fas fa-code"></i> Full Stack Developer</div>
+                        <h2 class="dev-name">Umair Farooqui</h2>
+                        <p class="dev-tagline">"Building digital solutions for real-world problems."</p>
+
+                        <div class="dev-divider"></div>
+
+                        <!-- Skills -->
+                        <div class="dev-skills-title"><i class="fas fa-layer-group"></i> Tech Stack</div>
+                        <div class="dev-skills">
+                            <span class="skill-badge"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="skill-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="skill-badge"><i class="fas fa-database"></i> MongoDB</span>
+                            <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
+                            <span class="skill-badge"><i class="fas fa-mobile-alt"></i> Responsive UI</span>
+                            <span class="skill-badge"><i class="fas fa-server"></i> REST API</span>
+                        </div>
+
+                        <div class="dev-divider"></div>
+
+                        <!-- Stats Row -->
+                        <div class="dev-stats-row">
+                            <div class="dev-stat-item">
+                                <span class="dev-stat-num">1</span>
+                                <span class="dev-stat-label">Project Live</span>
+                            </div>
+                            <div class="dev-stat-item">
+                                <span class="dev-stat-num">100%</span>
+                                <span class="dev-stat-label">Passion Driven</span>
+                            </div>
+                            <div class="dev-stat-item">
+                                <span class="dev-stat-num">∞</span>
+                                <span class="dev-stat-label">Ideas Pending</span>
+                            </div>
+                        </div>
+
+                        <div class="dev-divider"></div>
+
+                        <!-- Social Links -->
+                        <div class="dev-social-links">
+                            <a href="https://www.facebook.com/profile.php?id=61561042082791"
+                                class="dev-social-btn dev-fb" target="_blank" rel="noopener noreferrer" title="Facebook"
+                                onclick="trackEvent('social_click', { platform: 'facebook', source: 'developer' })">
+                                <i class="fab fa-facebook-f"></i> Facebook
+                            </a>
+                            <a href="https://www.instagram.com/umair___073?psln=MTdiYjRwZDRyczdrYw=="
+                                class="dev-social-btn dev-ig" target="_blank" rel="noopener noreferrer"
+                                title="Instagram"
+                                onclick="trackEvent('social_click', { platform: 'instagram', source: 'developer' })">
+                                <i class="fab fa-instagram"></i> Instagram
+                            </a>
+                            <a href="https://wa.me/919004920733?text=Hi%20Umair%2C%20I%20visited%20NagarMitra%20and%20would%20like%20to%20connect"
+                                class="dev-social-btn dev-wa" target="_blank" rel="noopener noreferrer" title="WhatsApp"
+                                onclick="trackEvent('whatsapp_click', { placement: 'developer_profile' }); if(typeof trackAdConversion==='function') trackAdConversion('whatsapp');">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                            <a href="https://github.com/Farooqui-codes" class="dev-social-btn dev-gh" target="_blank"
+                                rel="noopener noreferrer" title="GitHub"
+                                onclick="trackEvent('social_click', { platform: 'github', source: 'developer' })">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating decoration chips -->
+                <div class="dev-float-chip chip-1"><i class="fas fa-rocket"></i> Creator of NagarMitra</div>
+                <div class="dev-float-chip chip-2"><i class="fas fa-heart"></i> Built with Passion</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ================= LOGIN ================= -->
+    <section id="login" class="page">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-logo" aria-label="NagarMitra logo">
+                    <img src="logo.png" alt="NagarMitra logo" onerror="this.style.display='none'">
+                </div>
+                <h2>Welcome Back</h2>
+                <p class="sub">Login to your NagarMitra account</p>
+
+                <form onsubmit="loginUser(event)">
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="loginEmail" placeholder="Enter your email" required autocomplete="email">
+
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <div class="password-field">
+                        <input type="password" id="loginPassword" placeholder="Enter password" required
+                            autocomplete="current-password">
+                        <button type="button" class="pw-toggle" onclick="togglePassword('loginPassword', this)"
+                            aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <button class="btn primary full" style="margin-top: 22px;" type="submit">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </form>
+
+                <p class="auth-switch">
+                    Don't have an account? <a onclick="showPage('register')">Register</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REGISTER ================= -->
+    <section id="register" class="page">
+        <div class="auth-container">
+            <div class="auth-box">
+                <div class="auth-logo" aria-label="NagarMitra logo">
+                    <img src="logo.png" alt="NagarMitra logo" onerror="this.style.display='none'">
+                </div>
+                <h2>Create Account</h2>
+                <p class="sub">Register as a citizen</p>
+
+                <form onsubmit="registerUser(event)">
+                    <label><i class="fas fa-user"></i> Full Name</label>
+                    <input type="text" id="registerName" placeholder="Enter your name" required minlength="2">
+
+                    <label><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="registerEmail" placeholder="Enter email" required>
+
+                    <label><i class="fas fa-lock"></i> Password</label>
+                    <div class="password-field">
+                        <input type="password" id="registerPassword" placeholder="Create password (min 4 chars)"
+                            required minlength="4">
+                        <button type="button" class="pw-toggle" onclick="togglePassword('registerPassword', this)"
+                            aria-label="Toggle password visibility">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+
+                    <button class="btn primary full" style="margin-top: 22px;" type="submit">
+                        <i class="fas fa-check-circle"></i> Create Account
+                    </button>
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account? <a onclick="showPage('login')">Login</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= REPORT ================= -->
+    <section id="report" class="page">
+        <div class="page-header">
+            <span>REPORT</span>
+            <h1>Report a Public Problem</h1>
+            <p>Provide accurate information so the problem can be routed to the right department.</p>
+        </div>
+
+        <div class="report-layout">
+            <form class="report-form" id="reportForm" onsubmit="submitComplaint(event)">
+                <h2><i class="fas fa-file-circle-plus"></i> Complaint Details</h2>
+
+                <label><i class="fas fa-tags"></i> Problem Category *</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option value="Pothole / Road Damage">Pothole / Road Damage</option>
+                    <option value="Garbage Dump &amp; Cleanliness">Garbage Dump &amp; Cleanliness</option>
+                    <option value="Street Light &amp; Electrical Pole">Street Light &amp; Electrical Pole</option>
+                    <option value="Water Supply &amp; Pipeline Leakage">Water Supply &amp; Pipeline Leakage</option>
+                    <option value="Open Drainage &amp; Sewage Overflow">Open Drainage &amp; Sewage Overflow</option>
+                    <option value="Traffic Congestion &amp; Signal Malfunction">Traffic Congestion &amp; Signal
+                        Malfunction</option>
+                    <option value="Footpath &amp; Pedestrian Safety">Footpath &amp; Pedestrian Safety</option>
+                    <option value="Encroachment &amp; Illegal Parking">Encroachment &amp; Illegal Parking</option>
+                    <option value="Stray Animals &amp; Animal Nuisance">Stray Animals &amp; Animal Nuisance</option>
+                    <option value="Public Park &amp; Tree Maintenance">Public Park &amp; Tree Maintenance</option>
+                    <option value="Public Toilet &amp; Sanitation">Public Toilet &amp; Sanitation</option>
+                    <option value="Air, Noise &amp; Waste Pollution">Air, Noise &amp; Waste Pollution</option>
+                    <option value="Public Infrastructure &amp; Property Damage">Public Infrastructure &amp; Property
+                        Damage</option>
+                    <option value="Other Civic Issues (Others)">Other Civic Issues (Others)</option>
+                </select>
+
+                <label><i class="fas fa-align-left"></i> Description *</label>
+                <textarea id="description" rows="6" placeholder="Describe the problem..." required
+                    maxlength="1000"></textarea>
+                <small class="char-count"><span id="charCount">0</span> / 1000</small>
+
+                <label><i class="fas fa-camera"></i> Upload Photo</label>
+                <div class="file-upload" onclick="document.getElementById('problemImage').click()">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <span>Click to upload photo</span>
+                    <input type="file" id="problemImage" accept="image/*" onchange="previewImage(event)" hidden>
+                </div>
+                <div id="imagePreview"></div>
+
+                <label><i class="fas fa-map-marker-alt"></i> Location / Address *</label>
+                <input type="text" id="location" placeholder="Area, city, pincode, state, country" required>
+                <button type="button" class="location-btn" onclick="getLocation()">
+                    <i class="fas fa-crosshairs"></i> Use My Current Location
+                </button>
+                <div id="coordinates" aria-live="polite"></div>
+                <small class="location-attribution">Address data © OpenStreetMap contributors</small>
+
+                <button class="btn primary full submit-btn" type="submit" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Submit Complaint
+                </button>
+                <small class="autosave-note"><i class="fas fa-save"></i> Draft auto-saved as you type</small>
+            </form>
+
+            <div class="status-panel">
+                <div class="status-panel-icon">
+                    <i class="fas fa-city"></i>
+                </div>
+                <h2>Complaint Processing</h2>
+                <p>Once submitted, your complaint is sent to the right team based on category and location.</p>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Category Matching</div>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Priority Review</div>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Department Routing</div>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Status Tracking</div>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Email Notifications</div>
+                <div class="feature-item"><span><i class="fas fa-check"></i></span> Public Upvote Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= TRACK ================= -->
+    <section id="track" class="page">
+        <div class="page-header">
+            <span>TRACK</span>
+            <h1>Track Your Complaint</h1>
+            <p>Enter your Complaint ID to see the latest status.</p>
+        </div>
+
+        <div class="track-box">
+            <input type="text" id="trackId" placeholder="Example: PRB-1001">
+            <button class="btn primary" onclick="trackComplaint()">
+                <i class="fas fa-search"></i> Track
+            </button>
+        </div>
+
+        <div id="trackResult"></div>
+    </section>
+
+    <!-- ================= MY COMPLAINTS ================= -->
+    <section id="myComplaints" class="page">
+        <div class="page-header">
+            <span>MY REPORTS</span>
+            <h1>My Complaints</h1>
+            <p>All complaints submitted by you.</p>
+        </div>
+
+        <div id="myComplaintsList" class="my-complaints-container"></div>
+    </section>
+
+    <!-- ================= ADMIN ================= -->
+    <section id="admin" class="page">
+        <div class="page-header">
+            <span>ADMIN PANEL</span>
+            <h1>Complaint Management</h1>
+            <p>Monitor, assign and update public complaints.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span><i class="fas fa-clipboard-list"></i></span>
+                <h3 id="totalComplaints">0</h3>
+                <p>Total Complaints</p>
+            </div>
+            <div class="stat-card">
+                <span><i class="fas fa-hourglass-half"></i></span>
+                <h3 id="pendingComplaints">0</h3>
+                <p>Pending</p>
+            </div>
+            <div class="stat-card">
+                <span><i class="fas fa-screwdriver-wrench"></i></span>
+                <h3 id="progressComplaints">0</h3>
+                <p>In Progress</p>
+            </div>
+            <div class="stat-card">
+                <span><i class="fas fa-circle-check"></i></span>
+                <h3 id="resolvedComplaints">0</h3>
+                <p>Resolved</p>
+            </div>
+        </div>
+
+        <!-- Mini chart by category -->
+        <div class="admin-insights" id="adminInsights"></div>
+
+        <div class="admin-table-container">
+            <div class="table-header">
+                <h2><i class="fas fa-table-list"></i> All Complaints</h2>
+                <div class="table-actions">
+                    <input type="text" id="adminSearch" placeholder="Search by ID, location or category..."
+                        oninput="filterAdminTable()">
+                    <select id="adminFilter" onchange="filterAdminTable()">
+                        <option value="">All Status</option>
+                        <option value="Submitted">Submitted</option>
+                        <option value="Under Review">Under Review</option>
+                        <option value="Assigned">Assigned</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Resolved">Resolved</option>
+                        <option value="Closed">Closed</option>
+                    </select>
+                    <button class="btn-export" id="btnExportCSV" onclick="exportCSV()" title="Export as CSV">
+                        <i class="fas fa-file-csv"></i> Export
+                    </button>
+                    <button class="danger-btn" onclick="confirmClearComplaints()">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Location</th>
+                            <th>Severity</th>
+                            <th>Department</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complaintTable"></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Col 1: Brand & Status -->
+            <div class="footer-col footer-col-brand">
+                <div class="footer-logo" onclick="showPage('home')">
+                    <div class="footer-brand-mark" aria-label="NagarMitra logo">
+                        <i class="fas fa-city"></i>
+                    </div>
+                    <span>Nagar<span class="accent">Mitra</span></span>
+                </div>
+                <p class="footer-tagline">
+                    Smart civic problem reporting &amp; grievance redressal portal. Empowering citizens to report
+                    municipal issues and track resolution in real time.
+                </p>
+                <div class="footer-status-wrap">
+                    <div class="server-status-badge online" id="serverStatusBadge">
+                        <span class="status-dot-pulse"></span>
+                        <span id="serverStatusText">Backend API: Online (Node.js &amp; MongoDB)</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2: Navigation Links -->
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-col-title"><i class="fas fa-compass"></i> Quick Links</h4>
+                <ul class="footer-menu">
+                    <li><a onclick="showPage('home')"><i class="fas fa-angle-right"></i> Home</a></li>
+                    <li><a onclick="goToReport()"><i class="fas fa-angle-right"></i> Report a Problem</a></li>
+                    <li><a onclick="goToTrack()"><i class="fas fa-angle-right"></i> Track Complaint</a></li>
+                    <li><a onclick="goToMyComplaints()"><i class="fas fa-angle-right"></i> My Reports</a></li>
+                    <li><a onclick="goToAdmin()"><i class="fas fa-angle-right"></i> Admin Portal</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: About & Legal -->
+            <div class="footer-col footer-col-links">
+                <h4 class="footer-col-title"><i class="fas fa-circle-info"></i> Support &amp; About</h4>
+                <ul class="footer-menu">
+                    <li><a
+                            onclick="showPage('home'); setTimeout(() => document.getElementById('aboutSection')?.scrollIntoView({ behavior: 'smooth' }), 200)"><i
+                                class="fas fa-angle-right"></i> About Platform</a></li>
+                    <li><a
+                            onclick="showPage('home'); setTimeout(() => document.getElementById('contactSection')?.scrollIntoView({ behavior: 'smooth' }), 200)"><i
+                                class="fas fa-angle-right"></i> Contact Us</a></li>
+                    <li><a
+                            onclick="showPage('home'); setTimeout(() => document.getElementById('developerSection')?.scrollIntoView({ behavior: 'smooth' }), 200)"><i
+                                class="fas fa-angle-right"></i> Developer Profile</a></li>
+                    <li><a href="privacy.html" target="_blank" rel="noopener"><i class="fas fa-angle-right"></i> Privacy
+                            Policy</a></li>
+                    <li><a href="terms.html" target="_blank" rel="noopener"><i class="fas fa-angle-right"></i> Terms
+                            &amp; Conditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Contact & Connect -->
+            <div class="footer-col footer-col-contact">
+                <h4 class="footer-col-title"><i class="fas fa-address-book"></i> Connect</h4>
+                <div class="footer-contact-items">
+                    <a href="tel:+919004920733" class="footer-contact-link"
+                        aria-label="Call Phone Support +91 90049 20733" title="Call +91 90049 20733">
+                        <span class="contact-icon"><i class="fas fa-phone-alt"></i></span>
+                        <div class="contact-text-wrap">
+                            <span class="contact-label">Phone Support</span>
+                            <span class="contact-value">+91 90049 20733</span>
+                        </div>
+                    </a>
+                    <a href="mailto:fmdumair07@gmail.com" class="footer-contact-link"
+                        aria-label="Email Support fmdumair07@gmail.com" title="Email fmdumair07@gmail.com">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <div class="contact-text-wrap">
+                            <span class="contact-label">Email Support</span>
+                            <span class="contact-value">fmdumair07@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="footer-social-wrap">
+                    <span class="social-subheading">Follow On Social</span>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/profile.php?id=61561042082791"
+                            class="social-btn social-facebook" target="_blank" rel="noopener noreferrer"
+                            aria-label="Follow us on Facebook" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/umair___073?psln=MTdiYjRwZDRyczdrYw=="
+                            class="social-btn social-instagram" target="_blank" rel="noopener noreferrer"
+                            aria-label="Follow us on Instagram" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/919004920733?text=Hi%20NagarMitra%2C%20I%20have%20a%20query%20about%20a%20civic%20complaint"
+                            class="social-btn social-whatsapp" target="_blank" rel="noopener noreferrer"
+                            aria-label="Contact on WhatsApp" title="WhatsApp"
+                            onclick="trackEvent('whatsapp_click', { placement: 'footer' }); if(typeof trackAdConversion==='function') trackAdConversion('whatsapp');">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://github.com/Farooqui-codes" class="social-btn social-github" target="_blank"
+                            rel="noopener noreferrer" aria-label="View on GitHub" title="GitHub"
+                            onclick="trackEvent('social_click', { platform: 'github', source: 'footer' })">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright" id="copyrightText">© 2026 NagarMitra | Building Better Communities.</p>
+                <div class="footer-bottom-right">
+                    <span class="footer-dev-badge">Built by <strong>Umair Farooqui</strong></span>
+                    <span class="footer-bullet">•</span>
+                    <span class="footer-updated" id="footerUpdated"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+        <div class="mobile-menu-header">
+            <span>Menu</span>
+            <button class="mobile-menu-close" onclick="closeMobileMenu()" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <a onclick="showPage('home'); closeMobileMenu()" data-page="home"><i class="fas fa-home"></i> Home</a>
+        <a onclick="goToReport(); closeMobileMenu()" data-page="report"><i class="fas fa-pen-to-square"></i> Report a
+            Problem</a>
+        <a onclick="goToTrack(); closeMobileMenu()" data-page="track"><i class="fas fa-search"></i> Track Complaint</a>
+        <a onclick="goToMyComplaints(); closeMobileMenu()" data-page="myComplaints" id="mobileNavLinkMyReports"><i
+                class="fas fa-list-check"></i> My
+            Reports</a>
+        <a onclick="goToAdmin(); closeMobileMenu()" data-page="admin" id="mobileNavLinkAdmin"><i
+                class="fas fa-user-shield"></i> Admin</a>
+        <hr style="border-color: var(--card-border); margin: 8px 0;">
+        <a href="privacy.html" target="_blank" rel="noopener"><i class="fas fa-shield-halved"></i> Privacy Policy</a>
+        <a href="terms.html" target="_blank" rel="noopener"><i class="fas fa-file-contract"></i> Terms &amp;
+            Conditions</a>
+    </nav>
+
+    <!-- Floating Direct Calling Button -->
+    <a href="tel:+919004920733" class="floating-call-btn" id="floatingCallBtn"
+        aria-label="Call 24/7 Civic Helpline +91 90049 20733" title="Call Helpline: +91 90049 20733"
+        onclick="if(typeof trackEvent==='function') trackEvent('call_click', { placement: 'floating_button' });">
+        <i class="fas fa-phone-volume"></i>
+        <span class="call-float-badge">Call</span>
+    </a>
+
+    <!-- Floating WhatsApp Quick Connect Button -->
+    <a href="https://wa.me/919004920733?text=Hi%20NagarMitra%2C%20I%20need%20help%20reporting%20a%20civic%20complaint"
+        class="floating-whatsapp-btn" id="floatingWhatsAppBtn" target="_blank" rel="noopener noreferrer"
+        aria-label="Civic Help on WhatsApp" title="Chat with Civic Support on WhatsApp"
+        onclick="trackEvent('whatsapp_click', { placement: 'floating_button' }); if(typeof trackAdConversion==='function') trackAdConversion('whatsapp');">
+        <i class="fab fa-whatsapp"></i>
+        <span class="wa-float-badge">Help</span>
+    </a>
+
+    <!-- Scroll To Top -->
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" onclick="goToHomeTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Container -->
+    <div id="toastContainer"></div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+        <div class="modal-box" id="modalBox" onclick="event.stopPropagation()"></div>
+    </div>
+
+    <!-- Lightbox for Images -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <i class="fas fa-times lightbox-close"></i>
+        <img id="lightboxImg" src="" alt="Preview">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

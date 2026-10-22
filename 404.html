@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>404 - Page Not Found | NagarMitra</title>
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230284c7'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='system-ui,sans-serif' font-weight='900' font-size='34' fill='white'%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif
+        }
+
+        body {
+            background: #070d1a;
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden
+        }
+
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .12;
+            pointer-events: none
+        }
+
+        .b1 {
+            width: 500px;
+            height: 500px;
+            background: #0284c7;
+            top: -150px;
+            left: -150px;
+            animation: bf 8s ease-in-out infinite
+        }
+
+        .b2 {
+            width: 400px;
+            height: 400px;
+            background: #06b6d4;
+            bottom: -100px;
+            right: -100px;
+            animation: bf 10s ease-in-out infinite reverse
+        }
+
+        @keyframes bf {
+
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1)
+            }
+
+            50% {
+                transform: translate(30px, 20px) scale(1.06)
+            }
+        }
+
+        .brand {
+            position: fixed;
+            top: 22px;
+            left: 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #f8fafc;
+            font-weight: 800;
+            font-size: 1.15rem;
+            z-index: 10
+        }
+
+        .brand-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #0284c7, #00d2ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-weight: 900;
+            font-size: 1rem
+        }
+
+        .accent {
+            color: #0ea5e9
+        }
+
+        .wrap {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 32px 24px;
+            max-width: 540px
+        }
+
+        .ring {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            background: rgba(14, 165, 233, .1);
+            border: 2px solid rgba(14, 165, 233, .3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+            font-size: 2.8rem;
+            color: #0ea5e9;
+            animation: rp 2.5s ease-in-out infinite
+        }
+
+        @keyframes rp {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(14, 165, 233, .3)
+            }
+
+            50% {
+                box-shadow: 0 0 0 16px rgba(14, 165, 233, 0)
+            }
+        }
+
+        .code {
+            font-size: clamp(6rem, 20vw, 10rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #0284c7, #00d2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+            margin-bottom: 8px;
+            letter-spacing: -.04em
+        }
+
+        h1 {
+            font-size: 1.55rem;
+            font-weight: 700;
+            margin-bottom: 12px
+        }
+
+        .sub {
+            font-size: .95rem;
+            color: #94a3b8;
+            line-height: 1.7;
+            margin-bottom: 36px
+        }
+
+        .btns {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: .9rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all .22s ease
+        }
+
+        .primary {
+            background: linear-gradient(135deg, #0284c7, #00d2ff);
+            color: #fff
+        }
+
+        .primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(2, 132, 199, .4)
+        }
+
+        .secondary {
+            background: rgba(14, 165, 233, .1);
+            color: #38bdf8;
+            border: 1px solid rgba(14, 165, 233, .3)
+        }
+
+        .secondary:hover {
+            background: rgba(14, 165, 233, .18);
+            transform: translateY(-2px)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <a href="index.html" class="brand">
+        <div class="brand-icon">N</div>Nagar<span class="accent">Mitra</span>
+    </a>
+    <div class="wrap">
+        <div class="ring"><i class="fas fa-map-signs"></i></div>
+        <div class="code">404</div>
+        <h1>Page Not Found</h1>
+        <p class="sub">Oops! The page you're looking for doesn't exist or has been moved.<br>Let's get you back on
+            track.</p>
+        <div class="btns">
+            <a href="index.html" class="btn primary"><i class="fas fa-home"></i> Go Home</a>
+            <a href="#" class="btn secondary" onclick="history.back();return false"><i class="fas fa-arrow-left"></i> Go
+                Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

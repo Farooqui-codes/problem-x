@@ -1,0 +1,20 @@
+# Environment variables
+.env
+backend/.env
+*.env
+
+# Dependencies
+node_modules/
+backend/node_modules/
+
+# Logs & temp
+*.log
+npm-debug.log*
+
+# Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# OS generated files
+.DS_Store
+Thumbs.db
