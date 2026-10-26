@@ -8,7 +8,7 @@
 ========================= */
 const CONFIG = {
   MAX_IMAGE_SIZE: 1000000,
-  DRAFT_KEY: 'problemXDraft'
+  DRAFT_KEY: 'nagarMitraDraft'
 }
 
 /* =========================
@@ -73,7 +73,7 @@ function resolveApiBase () {
                            hostname.endsWith('web.app')
 
   if (isStaticPlatform) {
-    const defaultCloudBackend = 'https://problem-x-backend.onrender.com'
+    const defaultCloudBackend = 'https://nagarmitra-backend.onrender.com'
     return `${defaultCloudBackend}/api`
   }
 

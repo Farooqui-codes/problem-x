@@ -183,7 +183,7 @@ async function runTests() {
 
     // 10. Admin Authentication and Permissions
     console.log('--- TEST 10: Admin Authentication & Powers ---');
-    const adminEmail = process.env.ADMIN_EMAIL || 'admin@problemx.com';
+    const adminEmail = process.env.ADMIN_EMAIL || 'admin@nagarmitra.com';
     const adminPassword = process.env.ADMIN_PASSWORD;
 
     const adminLogin = await request('/auth/login', {

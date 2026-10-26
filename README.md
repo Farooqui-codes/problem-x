@@ -114,7 +114,7 @@ Create a `.env` file inside the `backend/` directory (or workspace root):
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
-ADMIN_EMAIL=admin@problemx.com
+ADMIN_EMAIL=admin@nagarmitra.com
 ADMIN_PASSWORD=YourAdminPassword123!
 NODE_ENV=development
 ```
